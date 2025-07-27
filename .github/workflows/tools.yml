@@ -12,4 +12,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
-          gh gist edit eaddbe3197746a36b4d2f16445d5b18c --filename "${GITHUB_WORKSPACE}/tools-data.json"
+          gh gist edit eaddbe3197746a36b4d2f16445d5b18c --filename "tools-data.json"
