@@ -1,0 +1,15 @@
+name: Daily Tools Workflow
+on:
+  workflow_dispatch:
+jobs:
+  update-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run update script
+        run: |
+           echo "[{\"to\": \"do\"}}" > tools-data.json
+      - name: Upload to Gist
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          gh gist edit eaddbe3197746a36b4d2f16445d5b18c --filename "${GITHUB_WORKSPACE}/tools-data.json"
