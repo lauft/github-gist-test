@@ -11,6 +11,6 @@ jobs:
       - name: Upload to Gist
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
-          GH_GIST_ID: ${{ vars.GH_GIST_ID }}
+          GH_GIST_ID: ${{ env.GH_GIST_ID }}
         run: |
           gh gist edit $GH_GIST_ID --filename "tools-data.json" tools-data.json
