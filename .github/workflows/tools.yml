@@ -13,4 +13,4 @@ jobs:
           GH_TOKEN: ${{ secrets.TOKEN }}
           GH_GIST_ID: ${{ secrets.GH_GIST_ID }}
         run: |
-          gh gist edit $GH_GIST_ID --filename "tools-data.json" tools-data.json
+          gh gist edit ${GH_GIST_ID} --filename "timew-tools.json" tools-data.json
